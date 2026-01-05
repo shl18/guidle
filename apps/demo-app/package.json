@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "Demo app for testing Guidle SDK",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node init && vite",
+    "build": "node init && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "vite": "^5.0.0",
     "typescript": "^5.9.3"

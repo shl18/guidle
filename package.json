@@ -7,14 +7,16 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:sdk\" \"npm run dev:demo\"",
-    "dev:backend": "npm run dev -w apps/backend",
-    "dev:sdk": "npm run dev -w @guidle/sdk",
-    "dev:demo": "npm run dev -w demo-app",
-    "build": "npm run build -w @guidle/sdk && npm run build -w apps/backend",
-    "build:sdk": "npm run build -w @guidle/sdk"
+    "dev": "node init && concurrently \"npm run dev:backend\" \"npm run dev:sdk\" \"npm run dev:demo\"",
+    "dev:backend": "node init && npm run dev -w apps/backend",
+    "dev:sdk": "node init && npm run dev -w @guidle/sdk",
+    "dev:demo": "node init && npm run dev -w demo-app",
+    "build": "node init && npm run build -w @guidle/sdk && npm run build -w apps/backend",
+    "build:sdk": "node init && npm run build -w @guidle/sdk"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
   }
 }
